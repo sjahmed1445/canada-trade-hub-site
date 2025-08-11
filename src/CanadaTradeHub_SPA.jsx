@@ -1,8 +1,6 @@
 import React, {useState} from "react";
-
 const FORM_ENDPOINT = "https://formspree.io/f/your-form-id"; // replace with your Formspree endpoint
-
-export default function CanadaTradeHub() {
+export default function CanadaTradeHub(){
   const products = [
     { title: "Whole Red Lentils (Grade 2)", subtitle: "50kg bags — Bagged", price: "USD 726/MT CFR Jebel Ali", key: "red-lentils", img: "/images/red-lentils.jpg" },
     { title: "Large Green Lentils (Grade 2)", subtitle: "50kg bags — Bagged", price: "USD 1,177/MT CFR Jebel Ali", key: "green-lentils", img: "/images/green-lentils.jpg" },
@@ -12,45 +10,39 @@ export default function CanadaTradeHub() {
     { title: "Yellow Peas", subtitle: "Export Grade", price: "Contact for Price", key: "peas", img: "/images/peas.jpg" },
     { title: "Chickpeas (Kabuli)", subtitle: "Export Grade", price: "Contact for Price", key: "chickpeas", img: "/images/chickpeas.jpg" }
   ];
-
   const [formData, setFormData] = useState({name:'',company:'',email:'',phone:'',message:'',subject:'Product Inquiry'});
-
   function handleQuote(product){
-    setFormData({...formData, message: `Requesting quote for: ${product.title}`});
     window.location.hash = "#contact";
-    // small delay for hash navigation
     setTimeout(()=>{
       const el = document.getElementById('message');
-      if(el) el.focus();
+      if(el) el.value = `Requesting quote for: ${product.title}`;
     },200);
   }
-
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
-      <header className="bg-white shadow">
+    <div className="min-h-screen bg-white text-gray-900">
+      <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <img src="/logo.png" alt="Canada Trade Hub" className="h-12 w-12 object-contain" />
+            <img src="/logo.png" alt="Canada Trade Hub" className="h-14 w-14 object-contain rounded" />
             <div>
-              <h1 className="text-lg font-semibold">Canada Trade Hub</h1>
-              <p className="text-xs text-gray-500">Trusted Canadian Commodities Exporter</p>
+              <h1 className="text-lg font-bold" style={{color:"var(--cth-red)"}}>Canada Trade Hub</h1>
+              <p className="text-xs text-gray-600">Trusted Canadian Commodities Exporter</p>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#products" className="hover:text-green-700">Products</a>
-            <a href="#logistics" className="hover:text-green-700">Logistics</a>
-            <a href="#about" className="hover:text-green-700">About</a>
-            <a href="#contact" className="px-4 py-2 bg-green-600 text-white rounded">Contact</a>
+            <a href="#products" className="hover:text-red-600">Products</a>
+            <a href="#logistics" className="hover:text-red-600">Logistics</a>
+            <a href="#about" className="hover:text-red-600">About</a>
+            <a href="#contact" className="px-4 py-2 bg-red-600 text-white rounded">Contact</a>
           </nav>
         </div>
       </header>
-
       <section className="container mx-auto px-6 py-16 flex flex-col-reverse lg:flex-row items-center gap-10">
         <div className="lg:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-extrabold leading-tight">Quality Canadian Grains & Pulses — Exported With Trust</h2>
-          <p className="mt-4 text-gray-600">We source directly from farms, co-ops and processors across Saskatchewan, Alberta and Manitoba. Supplying bagged and bulk shipments to GCC, Pakistan, Afghanistan, and Central Asia.</p>
+          <h2 className="text-3xl md:text-4xl font-extrabold leading-tight" style={{color:"var(--cth-red)"}}>Quality Canadian Grains & Pulses — Exported With Trust</h2>
+          <p className="mt-4 text-gray-700">We source directly from farms, co-ops and processors across Saskatchewan, Alberta and Manitoba. Supplying bagged and bulk shipments to GCC, Pakistan, Afghanistan, and Central Asia.</p>
           <div className="mt-6 flex gap-3">
-            <a href="#contact" className="px-5 py-3 bg-green-600 text-white rounded shadow">Request a Quote</a>
+            <a href="#contact" className="px-5 py-3 bg-red-600 text-white rounded shadow">Request a Quote</a>
             <a href="#products" className="px-5 py-3 border border-gray-200 rounded">View Products</a>
           </div>
         </div>
@@ -60,9 +52,8 @@ export default function CanadaTradeHub() {
           </div>
         </div>
       </section>
-
       <section id="products" className="container mx-auto px-6 py-12">
-        <h3 className="text-2xl font-bold">Products</h3>
+        <h3 className="text-2xl font-bold" style={{color:"var(--cth-red)"}}>Products</h3>
         <p className="text-gray-600 mt-2">We supply a range of grains, pulses and oilseeds. Typical packaging: 50kg jute/poly bags or bulk containers.</p>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((p)=> (
@@ -75,7 +66,7 @@ export default function CanadaTradeHub() {
               <div className="mt-3 flex items-center justify-between">
                 <div className="text-sm text-gray-700">{p.price}</div>
                 <div className="flex items-center gap-2">
-                  <button onClick={()=>handleQuote(p)} className="text-sm text-green-600">Request Quote</button>
+                  <button onClick={()=>handleQuote(p)} className="text-sm text-red-600">Request Quote</button>
                   <a href="/Canada_Trade_Hub_Catalog.pdf" className="text-sm text-gray-500" target="_blank" rel="noreferrer">Catalog</a>
                 </div>
               </div>
@@ -83,11 +74,10 @@ export default function CanadaTradeHub() {
           ))}
         </div>
       </section>
-
       <section id="logistics" className="container mx-auto px-6 py-12 bg-gradient-to-r from-white to-gray-50">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div>
-            <h3 className="text-2xl font-bold">Logistics & Export</h3>
+            <h3 className="text-2xl font-bold" style={{color:"var(--cth-red)"}}>Logistics & Export</h3>
             <p className="text-gray-600 mt-2">We coordinate export documentation, inspection, and container bookings. Typical export process includes: Quality testing, cleaning & grading, phytosanitary certificate, SGS/Intertek inspection, containerization, and shipping.</p>
             <ul className="mt-4 list-disc list-inside text-gray-600">
               <li>FOB (Vancouver / Montreal) or CFR (Jebel Ali, Karachi)</li>
@@ -121,19 +111,17 @@ export default function CanadaTradeHub() {
           </div>
         </div>
       </section>
-
       <section id="about" className="container mx-auto px-6 py-12">
-        <h3 className="text-2xl font-bold">About Canada Trade Hub</h3>
+        <h3 className="text-2xl font-bold" style={{color:"var(--cth-red)"}}>About Canada Trade Hub</h3>
         <p className="text-gray-600 mt-2">Canada Trade Hub is a Canadian-based commodity trading company specializing in the export of high-quality grains and pulses from Canada to the GCC, Pakistan, Afghanistan, and Central Asia. With partners located in Canada, the UAE, and Pakistan, we bridge the gap between Canadian farmers and international buyers.</p>
       </section>
-
       <section id="contact" className="container mx-auto px-6 py-12">
-        <h3 className="text-2xl font-bold">Contact Us</h3>
+        <h3 className="text-2xl font-bold" style={{color:"var(--cth-red)"}}>Contact Us</h3>
         <p className="text-gray-600 mt-2">Send us an inquiry and our team will respond within 24–48 hours.</p>
         <div className="mt-6 grid lg:grid-cols-2 gap-8">
           <div className="bg-white rounded shadow p-6">
             <form action={FORM_ENDPOINT} method="POST" className="grid gap-4">
-              <input type="hidden" name="subject" value={formData.subject} />
+              <input type="hidden" name="subject" value="Product Inquiry" />
               <div>
                 <label className="text-sm">Name</label>
                 <input id="name" name="name" required className="mt-1 w-full border rounded px-3 py-2" />
@@ -152,35 +140,33 @@ export default function CanadaTradeHub() {
               </div>
               <div>
                 <label className="text-sm">Commodity / Message</label>
-                <textarea id="message" name="message" rows={5} required className="mt-1 w-full border rounded px-3 py-2" defaultValue={formData.message} />
+                <textarea id="message" name="message" rows={5} required className="mt-1 w-full border rounded px-3 py-2" defaultValue="" />
               </div>
               <div>
-                <button type="submit" className="w-full px-4 py-3 bg-green-600 text-white rounded">Send Inquiry</button>
+                <button type="submit" className="w-full px-4 py-3 bg-red-600 text-white rounded">Send Inquiry</button>
               </div>
             </form>
           </div>
-
           <div className="space-y-4">
             <div className="bg-white rounded shadow p-6">
               <h5 className="font-semibold">Office (Canada)</h5>
-              <p className="text-sm text-gray-600 mt-1">Toronto, Ontario<br/>Email: info@canadatradehub.ca<br/>Phone: +1-416-XXX-XXXX</p>
+              <p className="text-sm text-gray-600 mt-1">1280 Fewster Dr, Mississauga, ON L4W 1A4<br/>1-416-7053249<br/>1-647-9916458<br/>info@canadatradehub.ca</p>
             </div>
             <div className="bg-white rounded shadow p-6">
               <h5 className="font-semibold">Office (UAE)</h5>
-              <p className="text-sm text-gray-600 mt-1">Dubai, UAE<br/>Email: uae@canadatradehub.ca<br/>Phone: +971-XX-XXXXXXX</p>
+              <p className="text-sm text-gray-600 mt-1">Ifza Business Park, DDP<br/>Dubai Selicon Oasis, UAE<br/>+971-50-5314405</p>
             </div>
             <div className="bg-white rounded shadow p-6">
-              <h5 className="font-semibold">Working Hours</h5>
-              <p className="text-sm text-gray-600 mt-1">Mon–Fri: 9:00 – 18:00 (Toronto & Dubai time zones)</p>
+              <h5 className="font-semibold">Office (Pakistan)</h5>
+              <p className="text-sm text-gray-600 mt-1">E-93, Block B, Gulshan e Jamal, Karachi, Pakistan</p>
             </div>
           </div>
         </div>
       </section>
-
       <footer className="bg-white border-t">
         <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between">
           <p className="text-sm text-gray-600">© {new Date().getFullYear()} Canada Trade Hub — All rights reserved.</p>
-          <div className="text-sm text-gray-600">Follow: <a className="ml-2 text-green-600" href="#">LinkedIn</a></div>
+          <div className="text-sm text-gray-600">Follow: <a className="ml-2 text-red-600" href="#">LinkedIn</a></div>
         </div>
       </footer>
     </div>
