@@ -149,15 +149,15 @@ export default function CanadaTradeHub(){
           </div>
           <div className="space-y-4">
             <div className="bg-white rounded shadow p-6">
-              <h5 className="font-semibold">Office (Canada)</h5>
+              <h5 className="font-semibold">Head Office - Canada</h5>
               <p className="text-sm text-gray-600 mt-1">1280 Fewster Dr, Mississauga, ON L4W 1A4<br/>1-416-7053249<br/>1-647-9916458<br/>info@canadatradehub.ca</p>
             </div>
             <div className="bg-white rounded shadow p-6">
-              <h5 className="font-semibold">Office (UAE)</h5>
+              <h5 className="font-semibold">UAE Office</h5>
               <p className="text-sm text-gray-600 mt-1">Ifza Business Park, DDP<br/>Dubai Selicon Oasis, UAE<br/>+971-50-5314405</p>
             </div>
             <div className="bg-white rounded shadow p-6">
-              <h5 className="font-semibold">Office (Pakistan)</h5>
+              <h5 className="font-semibold">Pakistan Office</h5>
               <p className="text-sm text-gray-600 mt-1">E-93, Block B, Gulshan e Jamal, Karachi, Pakistan</p>
             </div>
           </div>
