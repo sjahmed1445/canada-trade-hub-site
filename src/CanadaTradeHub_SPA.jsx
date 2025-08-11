@@ -120,7 +120,7 @@ export default function CanadaTradeHub(){
         <p className="text-gray-600 mt-2">Send us an inquiry and our team will respond within 24–48 hours.</p>
         <div className="mt-6 grid lg:grid-cols-2 gap-8">
           <div className="bg-white rounded shadow p-6">
-            <form action={FORM_ENDPOINT} method="POST" className="grid gap-4">
+            <form action="https://formspree.io/f/mwpqykzn" method="POST" className="grid gap-4">
               <input type="hidden" name="subject" value="Product Inquiry" />
               <div>
                 <label className="text-sm">Name</label>
