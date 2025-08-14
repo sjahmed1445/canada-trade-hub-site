@@ -2,13 +2,13 @@ import React, {useState} from "react";
 const FORM_ENDPOINT = "https://formspree.io/f/your-form-id"; // replace with your Formspree endpoint
 export default function CanadaTradeHub(){
   const products = [
-    { title: "Whole Red Lentils (Grade 2)", subtitle: "50kg bags — Bagged", price: "USD 726/MT CFR Jebel Ali", key: "red-lentils", img: "/images/red-lentils.jpg" },
-    { title: "Large Green Lentils (Grade 2)", subtitle: "50kg bags — Bagged", price: "USD 1,177/MT CFR Jebel Ali", key: "green-lentils", img: "/images/green-lentils.jpg" },
+    { title: "Whole Red Lentils", subtitle: "50kg bags — Bagged", price: "USD 726/MT CFR Jebel Ali", key: "red-lentils", img: "/images/red-lentils.jpg" },
+    { title: "Large Green Lentils", subtitle: "50kg bags — Bagged", price: "USD 1,177/MT CFR Jebel Ali", key: "green-lentils", img: "/images/green-lentils.jpg" },
     { title: "Canola (Seed & Oil)", subtitle: "Seed, Oil, Meal — Export", price: "Contact for Price", key: "canola", img: "/images/canola.jpg" },
     { title: "Durum Wheat", subtitle: "High-protein — Export Grade", price: "Contact for Price", key: "durum", img: "/images/durum-wheat.jpg" },
     { title: "High-Protein Wheat", subtitle: "Export Grade", price: "Contact for Price", key: "hp-wheat", img: "/images/durum-wheat.jpg" },
     { title: "Yellow Peas", subtitle: "Export Grade", price: "Contact for Price", key: "peas", img: "/images/peas.jpg" },
-    { title: "Chickpeas (Kabuli)", subtitle: "Export Grade", price: "Contact for Price", key: "chickpeas", img: "/images/chickpeas.jpg" }
+    { title: "Chickpeas", subtitle: "Export Grade", price: "Contact for Price", key: "chickpeas", img: "/images/chickpeas.jpg" }
   ];
   const [formData, setFormData] = useState({name:'',company:'',email:'',phone:'',message:'',subject:'Product Inquiry'});
   function handleQuote(product){
