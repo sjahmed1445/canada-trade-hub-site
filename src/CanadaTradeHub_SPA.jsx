@@ -54,7 +54,7 @@ export default function CanadaTradeHub(){
       </section>
       <section id="products" className="container mx-auto px-6 py-12">
         <h3 className="text-2xl font-bold" style={{color:"var(--cth-red)"}}>Products</h3>
-        <p className="text-gray-600 mt-2">We supply a range of grains, pulses and oilseeds. Typical packaging: 50kg jute/poly bags or bulk containers.</p>
+        <p className="text-gray-600 mt-2">We deal in Edible Oils, oilseeds, Grains and Pulses. Typical packaging: 50kg jute/poly bags or bulk containers.</p>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((p)=> (
             <div key={p.key} className="bg-white rounded shadow p-4 flex flex-col">
