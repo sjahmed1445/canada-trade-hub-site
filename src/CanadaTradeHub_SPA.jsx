@@ -2,8 +2,8 @@ import React, {useState} from "react";
 const FORM_ENDPOINT = "https://formspree.io/f/your-form-id"; // replace with your Formspree endpoint
 export default function CanadaTradeHub(){
   const products = [
-    { title: "Whole Red Lentils", subtitle: "50kg bags — Bagged", price: "USD 726/MT CFR Jebel Ali", key: "red-lentils", img: "/images/red-lentils.jpg" },
-    { title: "Large Green Lentils", subtitle: "50kg bags — Bagged", price: "USD 1,177/MT CFR Jebel Ali", key: "green-lentils", img: "/images/green-lentils.jpg" },
+    { title: "Whole Red Lentils", subtitle: "50kg bags — Bagged", price: "Contact for Price", key: "red-lentils", img: "/images/red-lentils.jpg" },
+    { title: "Large Green Lentils", subtitle: "50kg bags — Bagged", price: "Contact for Price", key: "green-lentils", img: "/images/green-lentils.jpg" },
     { title: "Canola (Seed & Oil)", subtitle: "Seed, Oil, Meal — Export", price: "Contact for Price", key: "canola", img: "/images/canola.jpg" },
     { title: "Durum Wheat", subtitle: "High-protein — Export Grade", price: "Contact for Price", key: "durum", img: "/images/durum-wheat.jpg" },
     { title: "High-Protein Wheat", subtitle: "Export Grade", price: "Contact for Price", key: "hp-wheat", img: "/images/durum-wheat.jpg" },
@@ -54,7 +54,7 @@ export default function CanadaTradeHub(){
       </section>
       <section id="products" className="container mx-auto px-6 py-12">
         <h3 className="text-2xl font-bold" style={{color:"var(--cth-red)"}}>Products</h3>
-        <p className="text-gray-600 mt-2">We deal in Edible Oils, oilseeds, Grains and Pulses. Typical packaging: 50kg jute/poly bags or bulk containers.</p>
+        <p className="text-gray-600 mt-2">We deal in Edible Oils, Oilseeds, Grains and Pulses. Typical packaging: 50kg jute/poly bags or bulk containers.</p>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((p)=> (
             <div key={p.key} className="bg-white rounded shadow p-4 flex flex-col">
