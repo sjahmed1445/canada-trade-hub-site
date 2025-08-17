@@ -6,7 +6,7 @@ export default function CanadaTradeHub(){
     { title: "Large Green Lentils", subtitle: "50kg bags — Bagged", price: "Contact for Price", key: "green-lentils", img: "/images/green-lentils.jpg" },
     { title: "Canola (Seed & Oil)", subtitle: "Seed, Oil, Meal — Export", price: "Contact for Price", key: "canola", img: "/images/canola.jpg" },
     { title: "Durum Wheat", subtitle: "High-protein — Export Grade", price: "Contact for Price", key: "durum", img: "/images/durum-wheat.jpg" },
-    { title: "High-Protein Wheat", subtitle: "Export Grade", price: "Contact for Price", key: "hp-wheat", img: "/images/durum-wheat.jpg" },
+    { title: "High-Protein Wheat", subtitle: "Export Grade", price: "Contact for Price", key: "hp-wheat", img: "/images/hero-grain.jpg" },
     { title: "Yellow Peas", subtitle: "Export Grade", price: "Contact for Price", key: "peas", img: "/images/peas.jpg" },
     { title: "Chickpeas", subtitle: "Export Grade", price: "Contact for Price", key: "chickpeas", img: "/images/chickpeas.jpg" }
   ];
