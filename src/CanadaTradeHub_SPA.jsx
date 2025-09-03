@@ -154,7 +154,7 @@ export default function CanadaTradeHub(){
             </div>
             <div className="bg-white rounded shadow p-6">
               <h5 className="font-semibold">UAE Office</h5>
-              <p className="text-sm text-gray-600 mt-1">Ifza Business Park, DDP<br/>Dubai Selicon Oasis, UAE<br/>+971-50-5314405</p>
+              <p className="text-sm text-gray-600 mt-1">Ifza Business Park, DDP<br/>Dubai Selicon Oasis, UAE<br/>+971-50-6897898</p>
             </div>
             <div className="bg-white rounded shadow p-6">
               <h5 className="font-semibold">Pakistan Office</h5>
