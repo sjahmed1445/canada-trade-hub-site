@@ -2,6 +2,10 @@ import React, {useState} from "react";
 const FORM_ENDPOINT = "https://formspree.io/f/your-form-id"; // replace with your Formspree endpoint
 export default function CanadaTradeHub(){
   const products = [
+    { title: "Cooking Oil", subtitle: "Export Grade", price: "Contact for Price", key: "cooking-oil", img: "/images/palmoil.jpg" },
+    { title: "Margarine", subtitle: "Export Grade", price: "Contact for Price", key: "margarine", img: "/images/margarines.jpg" },
+    { title: "Shortening", subtitle: "Export Grade", price: "Contact for Price", key: "shortening", img: "/images/shortening.jpg" },
+    { title: "Confectionery Fats", subtitle: "Export Grade", price: "Contact for Price", key: "confectionery-fats", img: "/images/confectioneryfats.jpg" },
     { title: "Whole Red Lentils", subtitle: "50kg bags — Bagged", price: "Contact for Price", key: "red-lentils", img: "/images/red-lentils.jpg" },
     { title: "Large Green Lentils", subtitle: "50kg bags — Bagged", price: "Contact for Price", key: "green-lentils", img: "/images/green-lentils.jpg" },
     { title: "Canola (Seed & Oil)", subtitle: "Seed, Oil, Meal — Export", price: "Contact for Price", key: "canola", img: "/images/canola.jpg" },
