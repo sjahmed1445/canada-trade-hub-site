@@ -30,7 +30,7 @@ export default function CanadaTradeHub(){
             <img src="/logo.png" alt="Canada Trade Hub" className="h-14 w-14 object-contain rounded" />
             <div>
               <h1 className="text-lg font-bold" style={{color:"var(--cth-red)"}}>Canada Trade Hub</h1>
-              <p className="text-xs text-[color:var(--cth-slate)]">Trusted Canadian Commodities Exporter</p>
+              <p className="text-xs text-[color:var(--cth-slate)]">Trusted Canadian Commodities Exporter/Importer</p>
             </div>
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm">
@@ -57,18 +57,15 @@ export default function CanadaTradeHub(){
             <a href="#contact" className="px-5 py-3 rounded-full text-white bg-[color:var(--cth-red)] hover:bg-[color:var(--cth-red-dark)] shadow-sm">Request a Quote</a>
             <a href="#products" className="px-5 py-3 rounded-full border border-[color:var(--cth-slate)]/30 hover:border-[color:var(--cth-red)]">View Products</a>
           </div>
-          <div className="mt-8 grid grid-cols-3 gap-4 text-center text-sm text-[color:var(--cth-slate)]">
-            <div className="rounded-2xl bg-white/70 border border-white/70 px-3 py-4">
-              <div className="text-lg font-semibold text-[color:var(--cth-ink)]">20–1,000mt</div>
-              <div>Flexible MOQ</div>
-            </div>
-            <div className="rounded-2xl bg-white/70 border border-white/70 px-3 py-4">
-              <div className="text-lg font-semibold text-[color:var(--cth-ink)]">FOB / CFR</div>
-              <div>Global Terms</div>
-            </div>
-            <div className="rounded-2xl bg-white/70 border border-white/70 px-3 py-4">
-              <div className="text-lg font-semibold text-[color:var(--cth-ink)]">SGS / Intertek</div>
-              <div>Inspections</div>
+          <div className="mt-8">
+            <div className="text-xs uppercase tracking-[0.2em] text-[color:var(--cth-slate)]">Trusted Across</div>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs text-[color:var(--cth-ink)]">
+              <span className="rounded-full border border-[color:var(--cth-slate)]/20 bg-white/70 px-3 py-1">GCC</span>
+              <span className="rounded-full border border-[color:var(--cth-slate)]/20 bg-white/70 px-3 py-1">Pakistan</span>
+              <span className="rounded-full border border-[color:var(--cth-slate)]/20 bg-white/70 px-3 py-1">Afghanistan</span>
+              <span className="rounded-full border border-[color:var(--cth-slate)]/20 bg-white/70 px-3 py-1">Central Asia</span>
+              <span className="rounded-full border border-[color:var(--cth-slate)]/20 bg-white/70 px-3 py-1">UAE</span>
+              <span className="rounded-full border border-[color:var(--cth-slate)]/20 bg-white/70 px-3 py-1">Canada</span>
             </div>
           </div>
         </div>
@@ -82,23 +79,47 @@ export default function CanadaTradeHub(){
         </div>
         </div>
       </section>
+      <section className="container mx-auto px-6 pb-6">
+        <div className="grid gap-4 rounded-3xl bg-white/80 border border-white/60 shadow-sm p-6 md:grid-cols-3">
+          <div>
+            <h3 className="text-lg font-semibold text-[color:var(--cth-ink)]">Why Work With Us</h3>
+            <p className="text-sm text-[color:var(--cth-slate)] mt-2">A pragmatic partner for steady supply and clear documentation.</p>
+          </div>
+          <div className="text-sm text-[color:var(--cth-slate)]">
+            <strong className="text-[color:var(--cth-ink)]">Fast Turnaround</strong>
+            <p className="mt-1">Direct sourcing and export/import-ready logistics.</p>
+          </div>
+          <div className="text-sm text-[color:var(--cth-slate)]">
+            <strong className="text-[color:var(--cth-ink)]">Compliance Ready</strong>
+            <p className="mt-1">COA, phyto, and third-party inspection available.</p>
+          </div>
+          <div className="text-sm text-[color:var(--cth-slate)]">
+            <strong className="text-[color:var(--cth-ink)]">Competitive Pricing</strong>
+            <p className="mt-1">Flexible terms for spot and contract buyers.</p>
+          </div>
+        </div>
+      </section>
+      <div className="container mx-auto px-6">
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-[color:var(--cth-slate)]/30 to-transparent"></div>
+      </div>
       <section id="products" className="container mx-auto px-6 py-12">
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
             <h3 className="text-2xl font-bold text-[color:var(--cth-red)]">Products</h3>
             <p className="text-[color:var(--cth-slate)] mt-2">We deal in Edible Oils, Oilseeds, Grains and Pulses. Typical packaging: 50kg jute/poly bags or bulk containers.</p>
+            <p className="text-xs text-[color:var(--cth-slate)] mt-2">Availability and pricing are subject to market and seasonal supply.</p>
           </div>
           <a href="/Canada_Trade_Hub_Catalog.pdf" className="text-sm text-[color:var(--cth-red)] border border-[color:var(--cth-red)]/30 px-4 py-2 rounded-full hover:border-[color:var(--cth-red)]" target="_blank" rel="noreferrer">Download Catalog</a>
         </div>
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((p)=> (
-            <div key={p.key} className="bg-white/90 rounded-2xl border border-white/70 shadow-sm p-4 flex flex-col hover:shadow-md transition-shadow">
+            <div key={p.key} className="bg-white/90 rounded-2xl border border-white/70 shadow-sm p-4 flex flex-col hover:shadow-md transition-all hover:-translate-y-0.5">
               <img src={p.img} alt={p.title} className="h-36 w-full object-cover rounded-xl" />
               <div className="mt-3 flex-1">
                 <h4 className="font-semibold text-[color:var(--cth-ink)]">{p.title}</h4>
                 <p className="text-xs text-[color:var(--cth-slate)] mt-1">{p.subtitle}</p>
               </div>
-              <div className="mt-3 flex items-center justify-between">
+              <div className="mt-4 flex items-center justify-between pt-3 border-t border-[color:var(--cth-slate)]/10">
                 <div className="text-sm text-[color:var(--cth-ink)]">{p.price}</div>
                 <div className="flex items-center gap-2">
                   <button onClick={()=>handleQuote(p)} className="text-sm text-[color:var(--cth-red)]">Request Quote</button>
@@ -109,26 +130,36 @@ export default function CanadaTradeHub(){
           ))}
         </div>
       </section>
+      <div className="container mx-auto px-6">
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-[color:var(--cth-slate)]/30 to-transparent"></div>
+      </div>
       <section id="logistics" className="container mx-auto px-6 py-12">
         <div className="grid lg:grid-cols-2 gap-8 items-center rounded-3xl bg-white/80 border border-white/60 shadow-sm p-8 lg:p-10">
           <div>
             <h3 className="text-2xl font-bold text-[color:var(--cth-red)]">Logistics & Export</h3>
-            <p className="text-[color:var(--cth-slate)] mt-2">We coordinate export documentation, inspection, and container bookings. Typical export process includes: Quality testing, cleaning & grading, phytosanitary certificate, SGS/Intertek inspection, containerization, and shipping.</p>
+            <p className="text-[color:var(--cth-slate)] mt-2">We coordinate export and import documentation, inspection, and container bookings. Typical process includes: Quality testing, cleaning & grading, phytosanitary certificate, SGS/Intertek inspection, containerization, and shipping.</p>
             <ul className="mt-4 list-disc list-inside text-[color:var(--cth-slate)]">
               <li>FOB (Vancouver / Montreal) or CFR (Jebel Ali, Karachi)</li>
               <li>Halal certification available on request</li>
               <li>Flexible MOQ: 20mt – 1,000mt (subject to product)</li>
+              <li>Typical lead time: 2–4 weeks after confirmation</li>
+              <li>Payment terms: LC / TT in CAD or USD</li>
             </ul>
           </div>
           <div>
-            <div className="bg-white rounded-2xl border border-white/70 shadow-sm p-6">
-              <h4 className="font-semibold text-[color:var(--cth-ink)]">Our Partners</h4>
-              <p className="text-sm text-[color:var(--cth-slate)] mt-2">We work with local cleaning facilities, export agents, and freight forwarders to ensure smooth shipments.</p>
-              <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-[color:var(--cth-ink)]">
-                <div>
-                  <strong>Inspection</strong>
-                  <p>SGS / Intertek</p>
-                </div>
+          <div className="bg-white rounded-2xl border border-white/70 shadow-sm p-6">
+            <h4 className="font-semibold text-[color:var(--cth-ink)]">Our Partners</h4>
+            <p className="text-sm text-[color:var(--cth-slate)] mt-2">We work with local cleaning facilities, export/import agents, and freight forwarders to ensure smooth shipments.</p>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs text-[color:var(--cth-ink)]">
+              <span className="rounded-full border border-[color:var(--cth-slate)]/20 bg-white/70 px-3 py-1">MOQ: 20–1,000mt</span>
+              <span className="rounded-full border border-[color:var(--cth-slate)]/20 bg-white/70 px-3 py-1">FOB / CFR Terms</span>
+              <span className="rounded-full border border-[color:var(--cth-slate)]/20 bg-white/70 px-3 py-1">SGS / Intertek</span>
+            </div>
+            <div className="mt-4 grid grid-cols-2 gap-3 text-sm text-[color:var(--cth-ink)]">
+              <div>
+                <strong>Inspection</strong>
+                <p>SGS / Intertek</p>
+              </div>
                 <div>
                   <strong>Freight</strong>
                   <p>CN Logistics, Kuehne+Nagel</p>
@@ -146,12 +177,45 @@ export default function CanadaTradeHub(){
           </div>
         </div>
       </section>
+      <div className="container mx-auto px-6">
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-[color:var(--cth-slate)]/30 to-transparent"></div>
+      </div>
+      <section className="container mx-auto px-6 py-12">
+        <div className="rounded-3xl bg-white/80 border border-white/60 shadow-sm p-8 lg:p-10">
+          <h3 className="text-2xl font-bold text-[color:var(--cth-red)]">Quality & Compliance</h3>
+          <p className="text-[color:var(--cth-slate)] mt-2">We prioritize consistency and documentation to meet import requirements.</p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 text-sm text-[color:var(--cth-slate)]">
+            <div className="rounded-2xl bg-white/70 border border-white/70 px-4 py-3">
+              <strong className="text-[color:var(--cth-ink)]">Certificates of Analysis</strong>
+              <p className="mt-1">COA provided per shipment.</p>
+            </div>
+            <div className="rounded-2xl bg-white/70 border border-white/70 px-4 py-3">
+              <strong className="text-[color:var(--cth-ink)]">Phytosanitary</strong>
+              <p className="mt-1">Official phytosanitary certificates available.</p>
+            </div>
+            <div className="rounded-2xl bg-white/70 border border-white/70 px-4 py-3">
+              <strong className="text-[color:var(--cth-ink)]">Third-Party Inspection</strong>
+              <p className="mt-1">SGS / Intertek inspection options.</p>
+            </div>
+            <div className="rounded-2xl bg-white/70 border border-white/70 px-4 py-3">
+              <strong className="text-[color:var(--cth-ink)]">Halal Certification</strong>
+              <p className="mt-1">Available on request.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="container mx-auto px-6">
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-[color:var(--cth-slate)]/30 to-transparent"></div>
+      </div>
       <section id="about" className="container mx-auto px-6 py-12">
         <div className="rounded-3xl bg-white/80 border border-white/60 shadow-sm p-8 lg:p-10">
           <h3 className="text-2xl font-bold text-[color:var(--cth-red)]">About Canada Trade Hub</h3>
-          <p className="text-[color:var(--cth-slate)] mt-2">Canada Trade Hub is a Canadian-based commodity trading company specializing in the export of high-quality grains and pulses from Canada to the GCC, Pakistan, Afghanistan, and Central Asia. With partners located in Canada, the UAE, and Pakistan, we bridge the gap between Canadian farmers and international buyers.</p>
+          <p className="text-[color:var(--cth-slate)] mt-2">Canada Trade Hub is a Canadian-based commodity trading company specializing in the export of high-quality grains and pulses from Canada to the GCC, Pakistan, Afghanistan, and Central Asia, and the import of high-quality and premium grade palm cooking oil, margarine, shortening, and specialty fats from Southeast Asia. With partners located in Canada, the UAE, and Pakistan, we bridge the gap between Canadian farmers, regional producers, and international buyers.</p>
         </div>
       </section>
+      <div className="container mx-auto px-6">
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-[color:var(--cth-slate)]/30 to-transparent"></div>
+      </div>
       <section id="contact" className="container mx-auto px-6 py-12">
         <h3 className="text-2xl font-bold text-[color:var(--cth-red)]">Contact Us</h3>
         <p className="text-[color:var(--cth-slate)] mt-2">Send us an inquiry and our team will respond within 24–48 hours.</p>
@@ -206,6 +270,9 @@ export default function CanadaTradeHub(){
           <div className="text-sm text-[color:var(--cth-slate)]">Follow: <a className="ml-2 text-[color:var(--cth-red)]" href="#">LinkedIn</a></div>
         </div>
       </footer>
+      <a href="#contact" className="fixed bottom-5 right-5 z-50 md:hidden rounded-full bg-[color:var(--cth-red)] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[color:var(--cth-red)]/30">
+        Request a Quote
+      </a>
     </div>
   );
 }
