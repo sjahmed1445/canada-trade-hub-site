@@ -51,7 +51,7 @@ export default function CanadaTradeHub(){
             Canadian Export/Import Partner
           </span>
           <h2 className="mt-4 text-2xl md:text-3xl font-extrabold leading-tight text-[color:var(--cth-red)]">Quality Canadian Grains & Pulses and Palm Oil products — Export/Import With Trust</h2>
-          <p className="mt-4 text-[color:var(--cth-slate)]">We source directly from farms, co-ops and processors across Saskatchewan, Alberta and Manitoba. Supplying bagged and bulk shipments to GCC, Pakistan, Afghanistan, and Central Asia.</p>
+          <p className="mt-4 text-[color:var(--cth-slate)]">We source directly from farms, co-ops and processors across Saskatchewan, Alberta and Manitoba. Supplying bagged and bulk shipments to GCC, Pakistan, Afghanistan, Africa and Central Asia.</p>
           <p className="mt-3 text-[color:var(--cth-slate)]">We source high-quality and premium grade Palm cooking oil, margarine, shortening and specialty fats from Indonesia and Malaysia.</p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href="#contact" className="px-5 py-3 rounded-full text-white bg-[color:var(--cth-red)] hover:bg-[color:var(--cth-red-dark)] shadow-sm">Request a Quote</a>
